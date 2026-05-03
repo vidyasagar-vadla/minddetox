@@ -1,0 +1,85 @@
+{
+  "page": 5,
+  "title": "Alcohol + Liver Health",
+  "description": "Alcohol pattern, medicines, risks, and liver-related symptoms.",
+  "fields": [
+    {
+      "id": "alcohol_core",
+      "label": "Alcohol use",
+      "type": "group",
+      "required": true,
+      "fields": [
+        { "id": "alcohol_days_per_week", "label": "Alcohol drinking days per week (0–7)", "type": "number", "required": true, "min": 0, "max": 7 },
+        { "id": "drinks_per_day_on_drinking_day", "label": "Average drinks on a drinking day (0–10)", "type": "number", "required": true, "min": 0, "max": 10 },
+        { "id": "binge_episodes_per_month", "label": "Binge episodes per month (5+ drinks at once) (0–12)", "type": "number", "required": true, "min": 0, "max": 12 },
+        { "id": "years_drinking", "label": "How many years have you been drinking? (0–50)", "type": "number", "required": true, "min": 0, "max": 50 }
+      ]
+    },
+
+    {
+      "id": "alcohol_type_weekly",
+      "label": "Approx weekly alcohol type (fill what applies)",
+      "type": "group",
+      "required": true,
+      "fields": [
+        { "id": "country_liquor_ml_per_week", "label": "Country liquor/whisky (ml/week) (0–2000)", "type": "number", "required": true, "min": 0, "max": 2000 },
+        { "id": "beer_bottles_per_week", "label": "Beer bottles/week (0–24)", "type": "number", "required": true, "min": 0, "max": 24 }
+      ]
+    },
+
+    {
+      "id": "food_liver",
+      "label": "Food habits (liver-related)",
+      "type": "group",
+      "required": true,
+      "fields": [
+        { "id": "junk_food_days_per_week", "label": "Junk/fast food days/week (0–7)", "type": "number", "required": true, "min": 0, "max": 7 },
+        { "id": "fried_food_days_per_week", "label": "Fried food days/week (0–7)", "type": "number", "required": true, "min": 0, "max": 7 },
+        { "id": "late_night_eating_days_per_week", "label": "Late-night eating days/week (0–7)", "type": "number", "required": true, "min": 0, "max": 7 },
+        { "id": "fruit_veg_servings_per_day_liver", "label": "Fruits/vegetables servings/day (0–10)", "type": "number", "required": true, "min": 0, "max": 10 }
+      ]
+    },
+
+    {
+      "id": "meds_supplements",
+      "label": "Medicines & supplements (weekly)",
+      "type": "group",
+      "required": true,
+      "fields": [
+        { "id": "otc_painkiller_days_per_week", "label": "Painkiller days/week (0–7)", "type": "number", "required": true, "min": 0, "max": 7 },
+        { "id": "energy_drink_per_week", "label": "Energy drinks per week (0–14)", "type": "number", "required": true, "min": 0, "max": 14 },
+        { "id": "herbal_supplements", "label": "Herbal supplements/kadha/tonics often?", "type": "radio_simple", "required": true, "options": ["No", "Yes"] }
+      ]
+    },
+
+    {
+      "id": "high_risk_exposure",
+      "label": "High-risk exposures (tick all that apply)",
+      "type": "checkbox",
+      "required": true,
+      "options": [
+        { "id": "hepatotoxic_meds", "label": "Strong long-term medicines (TB/anti-seizure etc.)" },
+        { "id": "unsafe_injections_history", "label": "Unsafe injection history" },
+        { "id": "tattoo_piercing_last_12_months", "label": "Tattoo/piercing in last 12 months" }
+      ]
+    },
+
+    { "id": "unprotected_partners_last_year", "label": "Unprotected partners last year (0–10)", "type": "number", "required": true, "min": 0, "max": 10 },
+
+    {
+      "id": "history_symptoms",
+      "label": "History & symptoms (tick all that apply)",
+      "type": "checkbox",
+      "required": true,
+      "options": [
+        { "id": "family_history_liver_disease", "label": "Family history of liver disease" },
+        { "id": "known_diabetes", "label": "Known diabetes" },
+        { "id": "known_obesity", "label": "Known obesity" },
+        { "id": "symptom_fatigue", "label": "Frequent fatigue" },
+        { "id": "symptom_right_upper_abdominal_pain", "label": "Right upper tummy pain" },
+        { "id": "symptom_nausea", "label": "Nausea often" },
+        { "id": "symptom_yellow_eyes_or_skin", "label": "Yellow eyes/skin noticed" }
+      ]
+    }
+  ]
+}

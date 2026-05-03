@@ -1,0 +1,67 @@
+{
+  "page": 4,
+  "title": "Food Habits (Stomach Health)",
+  "description": "Food patterns, acidity symptoms, and stomach-related habits.",
+  "fields": [
+    {
+      "id": "activity_level",
+      "label": "Activity level (most days)",
+      "type": "radio_simple",
+      "required": true,
+      "options": ["Sedentary", "Moderate", "Active"]
+    },
+
+    {
+      "id": "weekly_food",
+      "label": "Weekly food habits",
+      "type": "group",
+      "required": true,
+      "fields": [
+        { "id": "junk_fast_food_meals_per_week", "label": "Junk/Fast food meals per week (pizza/burger/noodles/outside food)", "type": "number", "required": true, "min": 0, "max": 30 },
+        { "id": "street_food_times_per_week", "label": "Street food times per week (pani puri/chaat/samosa/bajji)", "type": "number", "required": true, "min": 0, "max": 30 },
+        { "id": "fried_snacks_times_per_week", "label": "Fried snacks times per week (pakoda/chips/fries)", "type": "number", "required": true, "min": 0, "max": 30 },
+        { "id": "sugary_drinks_per_week", "label": "Sugary drinks per week (soft drinks/packaged juice/milkshake)", "type": "number", "required": true, "min": 0, "max": 40 }
+      ]
+    },
+
+    {
+      "id": "spice_late_night",
+      "label": "Spice + late-night eating",
+      "type": "group",
+      "required": true,
+      "fields": [
+        { "id": "spicy_level_0_3", "label": "Spicy level usually (0 Mild / 1 Medium / 2 Spicy / 3 Very spicy)", "type": "number", "required": true, "min": 0, "max": 3 },
+        { "id": "late_night_meals_per_week", "label": "Late-night meals per week (after 10pm)", "type": "number", "required": true, "min": 0, "max": 30 }
+      ]
+    },
+
+    {
+      "id": "daily_drinks",
+      "label": "Daily drinks",
+      "type": "group",
+      "required": true,
+      "fields": [
+        { "id": "tea_coffee_cups_per_day", "label": "Tea/Coffee cups per day", "type": "number", "required": true, "min": 0, "max": 20 },
+        { "id": "water_liters_per_day", "label": "Water per day (liters)", "type": "number", "required": true, "min": 0.5, "max": 8, "step": 0.1 }
+      ]
+    },
+
+    {
+      "id": "last_30_days_block",
+      "label": "Last 30 days mini-block",
+      "type": "group",
+      "required": true,
+      "fields": [
+        { "id": "fiber_servings_per_day", "label": "Fiber servings/day (dal/veg/salad/oats/whole grains)", "type": "number", "required": true, "min": 0, "max": 15 },
+        { "id": "fruits_veg_servings_per_day", "label": "Fruits + Veg servings/day", "type": "number", "required": true, "min": 0, "max": 15 },
+        { "id": "dairy_times_per_week", "label": "Dairy per week (milk/curd/paneer)", "type": "number", "required": true, "min": 0, "max": 30 },
+        { "id": "irregular_meals", "label": "Irregular meals often?", "type": "radio_simple", "required": true, "options": ["Yes", "No"] },
+
+        { "id": "antacid_use_per_week", "label": "Antacid use/week (Eno/Gelusil)", "type": "number", "required": true, "min": 0, "max": 30 },
+        { "id": "acidity_days_per_month", "label": "Acidity days/month (0–30)", "type": "number", "required": true, "min": 0, "max": 30 },
+        { "id": "bloating_days_per_month", "label": "Bloating days/month (0–30)", "type": "number", "required": true, "min": 0, "max": 30 },
+        { "id": "stomach_pain_days_per_month", "label": "Stomach pain days/month (0–30)", "type": "number", "required": true, "min": 0, "max": 30 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,455 @@
+/* Dashboard Specific Layout */
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.badge-status {
+  background: var(--green-soft);
+  color: var(--green);
+  padding: 8px 16px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot-pulse {
+  width: 6px;
+  height: 6px;
+  background: var(--green);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--green);
+}
+
+.streak-pill {
+  background: white;
+  padding: 10px 20px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+/* Grid setup */
+.dash-main-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 24px;
+}
+
+.sidebar-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Organ Image Frame */
+.hero-organ-frame {
+  width: 100%;
+  height: 240px;
+  background: #f8fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.hero-img-contain {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.card-body { padding: 30px; }
+.card-title-text { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; font-weight: 800; margin-bottom: 25px; }
+
+/* Organ Stats Rows */
+.organ-list-rows { display: flex; flex-direction: column; gap: 20px; }
+.row-info { display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: 700; font-size: 14px; }
+.row-name { display: flex; align-items: center; gap: 8px; }
+
+/* Addiction Display Box */
+.intensity-box-centered {
+  margin-top: 40px;
+  padding: 30px;
+  background: var(--green-soft);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.label-tiny { font-size: 11px; font-weight: 800; color: var(--text-muted); letter-spacing: 1px; }
+.intensity-number { font-size: 4.5rem; font-weight: 900; line-height: 1; margin: 10px 0; }
+.intensity-footer { font-size: 12px; color: var(--text-muted); font-style: italic; }
+
+/* Sidebar Components */
+.quote-card-styled {
+  background: var(--lavender);
+  color: white;
+  padding: 30px;
+  border-radius: var(--radius);
+  position: relative;
+}
+
+.quote-watermark { position: absolute; right: 10px; top: 10px; opacity: 0.15; }
+.label-tiny-white { font-size: 10px; font-weight: 800; opacity: 0.8; letter-spacing: 1px; }
+.quote-txt { font-size: 1.2rem; font-weight: 600; font-style: italic; margin-top: 15px; line-height: 1.5; }
+
+/* Savings Card Fix */
+.savings-card-aligned {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.savings-cash { font-size: 3.5rem; font-weight: 900; color: var(--green); line-height: 1; margin: 8px 0; }
+.savings-desc { font-size: 12px; color: var(--text-muted); }
+
+/* Weekly Tracker */
+.weekly-tracker-card { padding: 25px; }
+.week-grid-row { display: flex; justify-content: space-between; margin-top: 15px; }
+.day-circle-box { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.day-name-tiny { font-size: 10px; font-weight: 800; color: var(--text-muted); }
+
+/* HABIT CONTROL STYLING (Enhanced) */
+.habit-control-card { 
+  padding: 25px; 
+  min-height: 400px; /* Ensure consistent height */
+}
+
+.habit-badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.habit-badge-item-simple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 0.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 120px;
+  flex-direction: column;
+}
+
+.habit-badge-item-simple:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.habit-info-simple {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+  flex: 1;
+}
+
+.habit-name-simple {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.habit-level-badge {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Bottom Measures */
+.measures-grid-container { margin-top: 24px; padding: 30px; }
+.measures-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.measure-item-box { background: var(--bg); padding: 20px; border-radius: 18px; border-left: 5px solid var(--lavender); }
+.measure-h { font-weight: 800; margin-bottom: 8px; font-size: 14px; }
+.measure-item-box p { font-size: 13px; color: var(--text-muted); line-height: 1.4; }
+
+/* No Addictions Message */
+.no-addictions-message {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-muted);
+}
+
+.no-addictions-message p {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Manual Check-in Button */
+.day-check-button:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+.manual-check-info {
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.manual-check-info small {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+/* Simple Habit Badge */
+.habit-badge-item-simple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 0.75rem;
+  width: 100%;
+}
+
+.habit-info-simple {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.habit-name-simple {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.habit-level-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* AI Score Badge */
+.ai-score-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--lavender);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* AI Indicator */
+.ai-indicator {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+  background: var(--lavender);
+  color: white;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  text-transform: uppercase;
+}
+
+/* AI Success Prediction */
+.ai-success-prediction {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: var(--green-soft);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.ai-success-prediction small {
+  color: var(--green);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+/* AI Urgency Alert */
+.ai-urgency-alert {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: rgba(239, 68, 68, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.urgency-level {
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Goal Metrics Mini */
+.goal-metrics-mini {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.metric-mini {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.metric-mini.target {
+  color: var(--green);
+  font-weight: 600;
+}
+
+/* AI Navigation Tabs */
+.ai-navigation-tabs {
+  display: flex;
+  gap: 0.5rem;
+  background: var(--bg-secondary);
+  padding: 0.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.ai-tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ai-tab:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.ai-tab.active {
+  background: var(--lavender);
+  color: white;
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+}
+
+/* Alert Error */
+.alert-error {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  color: #991b1b;
+  margin-bottom: 1rem;
+}
+
+/* Enhanced Loading Container */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.loading-container p {
+  margin-top: 1rem;
+  color: var(--text-secondary);
+}
+
+/* Enhanced Dot Pulse Animation */
+.dot-pulse {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--lavender);
+  animation: dot-pulse 1.5s infinite ease-in-out;
+}
+
+.dot-pulse::before,
+.dot-pulse::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--lavender);
+  opacity: 0.6;
+}
+
+.dot-pulse::before {
+  animation: dot-pulse-before 1.5s infinite ease-in-out;
+}
+
+.dot-pulse::after {
+  animation: dot-pulse-after 1.5s infinite ease-in-out;
+}
+
+@keyframes dot-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(0.8); }
+}
+
+@keyframes dot-pulse-before {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.3); opacity: 0; }
+}
+
+@keyframes dot-pulse-after {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.3); opacity: 0; animation-delay: 0.75s; }
+}
+
+/* Responsive Design for AI Tabs */
+@media (max-width: 768px) {
+  .ai-navigation-tabs {
+    flex-direction: column;
+  }
+  
+  .ai-tab {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .dash-main-grid, .measures-grid-3 { grid-template-columns: 1fr; }
+}

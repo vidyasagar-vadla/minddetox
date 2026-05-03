@@ -1,0 +1,53 @@
+{
+  "page": 2,
+  "title": "Digital Habits (Social + Gaming)",
+  "description": "Your social media & gaming habits (used for brain health predictions).",
+  "fields": [
+    { "id": "social_media_hours_per_day", "label": "Social media time per day (hours)", "type": "number", "required": true, "min": 0, "max": 12, "step": 0.1 },
+    { "id": "gaming_hours_per_day", "label": "Gaming time per day (hours)", "type": "number", "required": true, "min": 0, "max": 12, "step": 0.1 },
+    { "id": "late_night_screen_days", "label": "Days per week you use phone after 11pm (0–7)", "type": "number", "required": true, "min": 0, "max": 7 },
+
+    {
+      "id": "most_used_platform",
+      "label": "Main social platform you use",
+      "type": "select",
+      "required": true,
+      "options": ["Instagram", "YouTube", "WhatsApp", "Facebook", "Snapchat", "TikTok", "X/Twitter", "Telegram", "Other"]
+    },
+    { "id": "most_used_platform_other", "label": "If Other, type platform name", "type": "text", "required": false, "placeholder": "Platform name" },
+
+    {
+      "id": "main_game_type",
+      "label": "Main game type you play",
+      "type": "select",
+      "required": true,
+      "options": ["BGMI/PUBG", "Free Fire", "Call of Duty", "Clash/Strategy", "Sports/FIFA", "PC/Console", "Casual", "No gaming"]
+    },
+
+    {
+      "id": "breaks_calm_time",
+      "label": "Breaks + calm time (choose one)",
+      "type": "radio_simple",
+      "required": true,
+      "options": [
+        "I take breaks often + do meditation/pranayama",
+        "Sometimes breaks, sometimes not",
+        "Rarely breaks, no calm time"
+      ]
+    },
+
+    {
+      "id": "sma_likert_block",
+      "label": "Social media addiction statements (1–5)",
+      "type": "group",
+      "required": true,
+      "fields": [
+        { "id": "sma_q12", "label": "I feel anxious if I cannot check my social media.", "type": "likert_1_5", "required": true },
+        { "id": "sma_q14", "label": "I spend more time on social media than I intend to.", "type": "likert_1_5", "required": true },
+        { "id": "sma_q15", "label": "Social media use interferes with my daily responsibilities.", "type": "likert_1_5", "required": true },
+        { "id": "sma_q16", "label": "I use social media to escape from stress or problems.", "type": "likert_1_5", "required": true },
+        { "id": "sma_q19", "label": "I have tried to reduce my social media use but found it difficult.", "type": "likert_1_5", "required": true }
+      ]
+    }
+  ]
+}

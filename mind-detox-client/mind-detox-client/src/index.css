@@ -1,0 +1,67 @@
+/* ===================== THEME & DESIGN SYSTEM ===================== */
+:root {
+  --bg: #fdfdfd;
+  --card-bg: #ffffff;
+  --green: #10b981;
+  --green-soft: #f0fdf4;
+  --lavender: #8b5cf6;
+  --lavender-soft: #f5f3ff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border: #f1f5f9;
+  --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+  --radius: 24px;
+}
+
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+body, html, #root {
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.04) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.04) 0px, transparent 50%);
+}
+
+/* Layout for the Full Page Dashboard */
+.shell-full {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.container-full {
+  width: 100%;
+  max-width: 1400px; /* Expands much wider for the dashboard */
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Reusing your progress bar styles */
+.progress-container {
+  height: 8px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}

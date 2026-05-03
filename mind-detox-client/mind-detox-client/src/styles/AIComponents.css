@@ -1,0 +1,870 @@
+/* AI Components Styles */
+
+/* Weekly Progress AI Styles */
+.weekly-progress-ai {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.weekly-progress-header {
+  background: linear-gradient(135deg, var(--lavender) 0%, var(--green-soft) 100%);
+  border: none;
+  color: white;
+}
+
+.progress-header-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+.progress-score-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.score-value {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.score-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+.progress-motivation h3 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.motivational-quote {
+  font-style: italic;
+  opacity: 0.9;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Goals Grid */
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.goal-item {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 1.25rem;
+  border-left: 4px solid var(--lavender);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.goal-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.goal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.goal-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.goal-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.difficulty-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.bg-green-100 { background-color: #dcfce7; color: #166534; }
+.bg-yellow-100 { background-color: #fef3c7; color: #92400e; }
+.bg-red-100 { background-color: #fee2e2; color: #991b1b; }
+
+.priority-indicator {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.goal-description {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.goal-metrics {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metric-value {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.metric-value.target {
+  color: var(--green);
+}
+
+/* Habits Analysis */
+.habits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.habit-analysis-item {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 1px solid var(--border-color);
+}
+
+.habit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.habit-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.habit-severity {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.severity-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.severity-minimal { background: #dcfce7; color: #166534; }
+.severity-mild { background: #ecfccb; color: #4d7c0f; }
+.severity-moderate { background: #fef3c7; color: #92400e; }
+.severity-moderate_severe { background: #fed7aa; color: #c2410c; }
+.severity-severe { background: #fee2e2; color: #991b1b; }
+.severity-critical { background: #fecaca; color: #dc2626; }
+
+.trend-indicator {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.trend-increasing { color: #dc2626; }
+.trend-decreasing { color: #059669; }
+.trend-stable { color: #6b7280; }
+
+.habit-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.detail-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.trigger-tags, .symptom-tag {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.trigger-tag, .symptom-tag {
+  background: var(--bg-tertiary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.recommendation-text {
+  margin: 0;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Recommendations */
+.recommendations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.recommendation-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border-left: 3px solid var(--green);
+}
+
+.recommendation-item span {
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Success Prediction */
+.success-meter {
+  margin-top: 1rem;
+}
+
+.success-bar {
+  width: 100%;
+  height: 20px;
+  background: var(--bg-tertiary);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.success-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--green) 0%, var(--lavender) 100%);
+  transition: width 0.5s ease;
+}
+
+.success-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.success-percentage {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.success-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Habit Control AI Styles */
+.habit-control-ai {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.habit-control-header {
+  background: linear-gradient(135deg, #dc2626 0%, var(--lavender) 100%);
+  border: none;
+  color: white;
+}
+
+.control-header-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+.control-score-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.urgency-assessment h3 {
+  color: white;
+  margin-bottom: 0.75rem;
+}
+
+.urgency-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.urgency-action {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+/* Tabs */
+.habit-tabs {
+  display: flex;
+  gap: 0.5rem;
+  background: var(--bg-secondary);
+  padding: 0.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.tab-button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-button:hover {
+  background: var(--bg-tertiary);
+}
+
+.tab-button.active {
+  background: var(--lavender);
+  color: white;
+}
+
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Addiction Analysis */
+.addiction-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.addiction-item {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.addiction-header {
+  margin-bottom: 1rem;
+}
+
+.addiction-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin: 0 0 0.75rem 0;
+}
+
+.severity-meter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.severity-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.severity-fill {
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+.severity-text {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: right;
+}
+
+.addiction-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-value {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.health-impact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.impact-organs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.organ-impact {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--bg-tertiary);
+  border-radius: 8px;
+  font-size: 0.8rem;
+}
+
+.organ-name {
+  font-weight: 500;
+}
+
+.impact-score {
+  color: var(--lavender);
+  font-weight: 600;
+}
+
+.symptom-tags, .trigger-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.symptom-tag, .trigger-tag {
+  background: var(--bg-tertiary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* Success Prediction */
+.success-metrics {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.success-probability {
+  flex-shrink: 0;
+}
+
+.probability-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(var(--green) 0deg, var(--green) calc(var(--probability) * 3.6deg), var(--bg-tertiary) calc(var(--probability) * 3.6deg));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.probability-circle::before {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: white;
+}
+
+.probability-value {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  position: relative;
+  z-index: 1;
+}
+
+.probability-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+  z-index: 1;
+}
+
+.success-details {
+  flex: 1;
+}
+
+.success-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.success-factors ul {
+  margin: 0.5rem 0 0 0;
+  padding-left: 1.5rem;
+}
+
+.success-factors li {
+  margin-bottom: 0.25rem;
+  color: var(--text-secondary);
+}
+
+/* Intervention Plan */
+.plan-overview {
+  background: var(--bg-secondary);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--lavender);
+}
+
+.primary-focus h4 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.intervention-timeline {
+  margin-bottom: 2rem;
+}
+
+.intervention-timeline h4 {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.timeline-phase {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+}
+
+.phase-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.phase-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--lavender);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.phase-info h5 {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.phase-duration {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.phase-content {
+  flex: 1;
+}
+
+.phase-goals, .phase-interventions {
+  margin-top: 0.75rem;
+}
+
+.phase-goals strong, .phase-interventions strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.phase-goals ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.phase-goals li {
+  margin-bottom: 0.25rem;
+  color: var(--text-secondary);
+}
+
+.intervention-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.intervention-tag {
+  background: var(--bg-tertiary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Daily Routines */
+.daily-routines h4 {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.routines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.routine-block {
+  background: var(--bg-secondary);
+  padding: 1rem;
+  border-radius: 8px;
+  border-top: 3px solid var(--lavender);
+}
+
+.routine-time {
+  margin: 0 0 0.75rem 0;
+  color: var(--lavender);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.routine-list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.routine-list li {
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Support System */
+.support-system h4 {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.support-category {
+  background: var(--bg-secondary);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.support-type {
+  margin: 0 0 0.75rem 0;
+  color: var(--lavender);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.support-list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.support-list li {
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Next Steps */
+.next-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.next-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border-left: 4px solid var(--green);
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--green);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.step-content {
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Contingency Plan */
+.contingency-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.contingency-section h4 {
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.contingency-section ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.contingency-section li {
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .progress-header-content,
+  .control-header-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .goals-grid,
+  .habits-grid,
+  .addiction-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .success-metrics {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .habit-tabs {
+    flex-direction: column;
+  }
+
+  .routines-grid,
+  .support-grid,
+  .contingency-content {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-phase {
+    flex-direction: column;
+  }
+
+  .goal-metrics {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}

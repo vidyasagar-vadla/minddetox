@@ -1,0 +1,94 @@
+/* Register.css */
+
+.container.mini {
+  max-width: 480px;
+}
+
+/* ✅ Match login theme */
+.register-card {
+  padding: 50px 40px;
+  border-top: 6px solid var(--green);
+}
+
+/* ✅ same green logo box as login */
+.logo-box-green {
+  width: 48px;
+  height: 48px;
+  background: var(--green);
+  color: white;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  margin: 0 auto 20px;
+}
+
+/* ✅ same lavender shadow as login */
+.shadow-lavender {
+  box-shadow: 0 20px 40px -10px rgba(139, 92, 246, 0.15);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.control-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-wrapper .control {
+  padding-left: 48px;
+}
+
+/* input */
+.control {
+  width: 100%;
+  padding: 14px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  outline: none;
+  font-size: 16px;
+  background: #fff;
+}
+
+.control:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.12);
+}
+
+.full-width {
+  width: 100%;
+  margin-top: 10px;
+  justify-content: center;
+  gap: 10px;
+}
+
+.auth-footer {
+  margin-top: 24px;
+  text-align: center;
+}
+
+/* ✅ match login link style */
+.link-green {
+  color: var(--green);
+  font-weight: 700;
+  cursor: pointer;
+}

@@ -1,0 +1,111 @@
+/* ===================== WIZARD THEME ===================== */
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  max-height: 800px;
+  position: relative;
+}
+
+.panelContent {
+  flex: 1;
+  overflow-y: auto;
+  /* Extra bottom padding so inputs aren't hidden by the sticky bar */
+  padding: 40px 60px 180px; 
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+/* Progress Bar Overrides */
+.progress {
+  height: 6px;
+  background: var(--border);
+  border-radius: 99px;
+  margin: 20px 60px 0;
+  overflow: hidden;
+}
+
+.progress > div {
+  height: 100%;
+  background: linear-gradient(90deg, var(--green), var(--lavender));
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Form Controls */
+.control {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 14px;
+  border: 2px solid var(--border);
+  background: #fcfcfc;
+  font-size: 16px;
+  font-family: inherit;
+  transition: 0.2s;
+  color: var(--text-main);
+}
+
+.control:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 4px var(--green-soft);
+}
+
+/* Option Grids (Radios, Likert, Scale) */
+.optionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.option {
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 2px solid var(--border);
+  background: white;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.option:hover {
+  background: var(--green-soft);
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.option.selected {
+  background: var(--green);
+  color: white;
+  border-color: var(--green);
+  box-shadow: 0 8px 16px -4px rgba(16, 185, 129, 0.3);
+}
+
+/* Sticky Footer Navigation */
+.stickyBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 60px;
+  background: linear-gradient(to top, white 80%, rgba(255,255,255,0));
+  z-index: 10;
+}
+
+.stickyInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Responsive Fixes */
+@media (max-width: 600px) {
+  .panelContent { padding: 20px 20px 150px; }
+  .progress { margin: 20px 20px 0; }
+  .stickyBar { padding: 20px; }
+  .optionGrid { grid-template-columns: 1fr; }
+}

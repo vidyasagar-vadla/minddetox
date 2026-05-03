@@ -1,0 +1,67 @@
+{
+  "page": 1,
+  "title": "General Info",
+  "description": "Basic details (common for all sections).",
+  "fields": [
+    { "id": "age", "label": "Your age (years)", "type": "number", "required": true, "min": 10, "max": 120 },
+
+    {
+      "id": "gender",
+      "label": "Gender",
+      "type": "radio_simple",
+      "required": true,
+      "options": ["Male", "Female", "Other"]
+    },
+
+    {
+      "id": "residence",
+      "label": "Where do you live?",
+      "type": "radio_simple",
+      "required": true,
+      "options": ["Urban", "Semi-Urban", "Rural"]
+    },
+
+    {
+      "id": "occupation",
+      "label": "What do you do currently?",
+      "type": "select",
+      "required": true,
+      "options": ["School", "College", "Job", "Business", "Homemaker", "Unemployed", "Other"]
+    },
+
+    {
+      "id": "phone_type",
+      "label": "Phone type",
+      "type": "radio_simple",
+      "required": true,
+      "options": ["Android", "iPhone"]
+    },
+
+    {
+      "id": "body_metrics",
+      "label": "Body details (for health models)",
+      "type": "group",
+      "required": true,
+      "fields": [
+        { "id": "height_cm", "label": "Height (cm)", "type": "number", "min": 120, "max": 220, "required": true },
+        { "id": "weight_kg", "label": "Weight (kg)", "type": "number", "min": 30, "max": 250, "required": true },
+        { "id": "waist_cm", "label": "Waist size (cm) (approx)", "type": "number", "min": 50, "max": 170, "required": true }
+      ]
+    },
+
+    {
+      "id": "routine",
+      "label": "Daily routine",
+      "type": "group",
+      "required": true,
+      "fields": [
+        { "id": "sleep_hours", "label": "Sleep hours per night", "type": "number", "min": 3, "max": 12, "step": 0.1, "required": true },
+        { "id": "screen_time_hours", "label": "Total screen time per day (hours)", "type": "number", "min": 0, "max": 18, "step": 0.1, "required": true },
+        { "id": "exercise_days_per_week", "label": "Physical activity / exercise days per week (0–7)", "type": "number", "min": 0, "max": 7, "required": true }
+      ]
+    },
+
+    { "id": "stress_0_10", "label": "Stress level (0–10)", "type": "scale_0_10", "required": true },
+    { "id": "anxiety_0_10", "label": "Anxiety level (0–10)", "type": "scale_0_10", "required": true }
+  ]
+}

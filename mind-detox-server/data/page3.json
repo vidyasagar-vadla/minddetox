@@ -1,0 +1,115 @@
+{
+  "page": 3,
+  "title": "Tobacco + Lung Health",
+  "description": "Smoking/tobacco + air exposure + breathing symptoms.",
+  "fields": [
+    {
+      "id": "tobacco_type",
+      "label": "Which tobacco type applies to you most?",
+      "type": "select",
+      "required": true,
+      "options": ["None", "Smoking", "Smokeless (Gutkha/Khaini/Paan)", "Both Smoking + Smokeless", "Vaping/E-cigarette", "Hookah/Sheesha"]
+    },
+
+    {
+      "id": "smoking_details",
+      "label": "Smoking details",
+      "type": "group",
+      "required": true,
+      "fields": [
+        {
+          "id": "smoking_status",
+          "label": "Smoking status",
+          "type": "radio_simple",
+          "required": true,
+          "options": ["Never", "Former", "Current"]
+        },
+        { "id": "cigarettes_per_day", "label": "Cigarettes/Bidi per day (0–40)", "type": "number", "required": true, "min": 0, "max": 40 },
+        { "id": "years_smoked", "label": "Years smoked (0–60)", "type": "number", "required": true, "min": 0, "max": 60 }
+      ]
+    },
+
+    {
+      "id": "smokeless_details",
+      "label": "Gutkha/Khaini/Paan masala",
+      "type": "group",
+      "required": true,
+      "fields": [
+        { "id": "smokeless_tobacco", "label": "Do you use smokeless tobacco?", "type": "radio_simple", "required": true, "options": ["No", "Yes"] },
+        { "id": "gutkha_pouches_per_day", "label": "If yes, pouches per day (0–15)", "type": "number", "required": true, "min": 0, "max": 15 }
+      ]
+    },
+
+    {
+      "id": "passive_smoke",
+      "label": "Second-hand smoke exposure at home/work",
+      "type": "radio_simple",
+      "required": true,
+      "options": ["No", "Less than 1 hour/day", "1–3 hours/day", "More than 3 hours/day"]
+    },
+
+    {
+      "id": "lung_environment",
+      "label": "Home/work environment",
+      "type": "group",
+      "required": true,
+      "fields": [
+        {
+          "id": "biomass_cooking_chulha",
+          "label": "Cooking fuel mostly used at home",
+          "type": "radio_simple",
+          "required": true,
+          "options": ["Gas/Electric", "Wood/Coal/Chulha"]
+        },
+        {
+          "id": "indoor_ventilation",
+          "label": "Home ventilation is...",
+          "type": "radio_simple",
+          "required": true,
+          "options": ["Good", "Average", "Poor (closed/smoky)"]
+        },
+        {
+          "id": "occupational_dust_chemical_exposure",
+          "label": "Your work involves dust/chemicals?",
+          "type": "radio_simple",
+          "required": true,
+          "options": ["No", "Sometimes", "Daily"]
+        },
+        {
+          "id": "pollution_index_0_1",
+          "label": "Air pollution in your area (0.0 to 1.0) (estimate)",
+          "type": "number",
+          "required": true,
+          "min": 0,
+          "max": 1,
+          "step": 0.01
+        }
+      ]
+    },
+
+    {
+      "id": "lung_symptoms",
+      "label": "Symptoms you experience often (select all that apply)",
+      "type": "checkbox",
+      "required": true,
+      "options": [
+        { "id": "symptom_cough", "label": "Chronic cough" },
+        { "id": "symptom_wheeze", "label": "Wheezing" },
+        { "id": "symptom_breathlessness", "label": "Breathlessness" },
+        { "id": "symptom_chest_tightness", "label": "Chest tightness" },
+        { "id": "symptom_none", "label": "None" }
+      ]
+    },
+
+    {
+      "id": "lung_quick_numbers",
+      "label": "Optional quick health numbers (if known)",
+      "type": "group",
+      "required": true,
+      "fields": [
+        { "id": "resting_spo2", "label": "Resting SpO₂ % (if known)", "type": "number", "required": true, "min": 70, "max": 100, "step": 0.1 },
+        { "id": "peak_flow_lpm", "label": "Peak flow (L/min) (if known)", "type": "number", "required": true, "min": 50, "max": 900 }
+      ]
+    }
+  ]
+}
